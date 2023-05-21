@@ -36,7 +36,8 @@
   };
   
   function getEmailIdentifier() {
-    
+    console.log('getEmailIdentifier 1') 
+    console.log(Office.context) 
     const emailIdentifier = Office.context.mailbox.item.itemId;
       
       // Display the email identifier in the side panel
