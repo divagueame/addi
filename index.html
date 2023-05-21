@@ -11,7 +11,10 @@
     <!-- https://divagueame.github.io/addi/index.html -->
     <!-- https://divagueame.github.io/addi/manifest.xml -->
     <p>Chiki.</p>
-    <button id="helloButton">Say hello</button>
+
+<div>emailIdentifier:
+    <span id="emailIdentifier"></span>
+</div>    <button id="helloButton">Say hello</button>
 
     <!-- The following image URL tracks diagnostic data for this sample add-in. Please remove the image tag if you reuse this sample in your own code project. -->
     <img src="https://pnptelemetry.azurewebsites.net/pnp-officeaddins/samples/outlook-add-in-hello-world-run" />
@@ -33,17 +36,12 @@
   };
   
   function getEmailIdentifier() {
-    console.log('get em') 
-    Office.context.mailbox.item.itemId.getAsync(function(result) {
-        console.log('GE 1') 
-      if (result.status === Office.AsyncResultStatus.Succeeded) {
-        console.log('GE 2') 
-        var emailIdentifier = result.value;
-        console.log(emailIdentifier);
-      } else {
-        console.error('Failed to get email identifier:', result.error);
-      }
-    });
+    
+    const emailIdentifier = Office.context.mailbox.item.itemId;
+      
+      // Display the email identifier in the side panel
+      const emailIdentifierElement = document.getElementById('emailIdentifier');
+      emailIdentifierElement.textContent = emailIdentifier;
   }
   
 

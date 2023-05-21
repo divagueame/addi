@@ -1,0 +1,33 @@
+{
+  "$schema": "https://developer.microsoft.com/en-us/json-schemas/office-add-in-manifest-schema",
+  "version": "1.9",
+  "id": "1e7e38da-7ad6-429a-9c6f-81aa1b9c9344",
+  "displayName": {
+    "default": "Chiki"
+  },
+  "defaultLocale": "en-US",
+  "description": {
+    "default": "Chiki description"
+  },
+  "icons": {
+    "16": "https://officedev.github.io/Office-Add-in-samples/Samples/hello-world/outlook-hello-world/assets/icon-16.png",
+    "32": "https://officedev.github.io/Office-Add-in-samples/Samples/hello-world/outlook-hello-world/assets/icon-32.png",
+    "80": "https://officedev.github.io/Office-Add-in-samples/Samples/hello-world/outlook-hello-world/assets/icon-80.png"
+  },
+  "host": {
+    "name": "Mailbox"
+  },
+  "permissions": ["ReadWriteMailbox"],
+  "webApplicationInfo": {
+    "id": "your-app-id",
+    "resource": "https://divagueame.github.io"
+  },
+  "DefaultSettings": {
+    "SidePanel": {
+      "URL": "https://divagueame.github.io/addi/index.html",
+      "Title": "Side Panel Title",
+      "RequiredWidth": "Medium"
+    }
+  },
+  "webApplicationManifestUrl": "https://divagueame.github.io/addi/manifest.json"
+}
