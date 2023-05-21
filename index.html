@@ -25,12 +25,29 @@
         }
     });
 
+
+    Office.initialize = function() {
+    // Office.js initialization code
+  };
+  
+  function getEmailIdentifier() {
+    Office.context.mailbox.item.itemId.getAsync(function(result) {
+      if (result.status === Office.AsyncResultStatus.Succeeded) {
+        var emailIdentifier = result.value;
+        console.log(emailIdentifier);
+      } else {
+        console.error('Failed to get email identifier:', result.error);
+      }
+    });
+  }
+  
+
     /**
      * Writes 'Hello world!' to a new message body.
      */
     function sayHello() {
         Office.context.mailbox.item.body.setAsync(
-            "Hello world!",
+            "Hello world123!",
             {
                 coercionType: "html", // Write text as HTML
             },
