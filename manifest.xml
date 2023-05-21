@@ -52,11 +52,11 @@
             <OfficeTab id="TabDefault">
               <Group id="msgReadCmdGroup">
                 <Label resid="CommandsGroup.Label"/>
-                <Control xsi:type="Button" id="msgReadOpenPaneButton">
+                <Control xsi:type="Button" id="msgReadShowPanel">
                   <Label resid="TaskpaneButton.Label"/>
                   <Supertip>
-                    <Title resid="TaskpaneButton.Label"/>
-                    <Description resid="TaskpaneButton.Tooltip"/>
+                    <Title resid="TaskpaneButton.SupertipTitle"/>
+                    <Description resid="TaskpaneButton.SupertipText"/>
                   </Supertip>
                   <Icon>
                     <bt:Image size="16" resid="Icon.16x16"/>
@@ -79,10 +79,6 @@
                 <Label resid="CommandsGroup.Label"/>
                 <Control xsi:type="Button" id="msgComposeInsertGist">
                   <Label resid="TaskpaneButton.Label"/>
-                  <Supertip>
-                    <Title resid="TaskpaneButton.SupertipTitle"/>
-                    <Description resid="TaskpaneButton.SupertipText"/>
-                  </Supertip>
                   <Icon>
                     <bt:Image size="16" resid="Icon.16x16"/>
                     <bt:Image size="32" resid="Icon.32x32"/>
@@ -112,9 +108,6 @@
         <bt:String id="TaskpaneButton.Label" DefaultValue="CHiki1"/>
         <bt:String id="TaskpaneButton.SupertipTitle" DefaultValue="CHiki3"/>
       </bt:ShortStrings>
-      <bt:LongStrings>
-        <bt:String id="TaskpaneButton.SupertipText" DefaultValue="CHiki4"/>
-      </bt:LongStrings>
     </Resources>
   </VersionOverrides>
 </OfficeApp>
