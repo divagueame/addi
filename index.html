@@ -36,14 +36,16 @@
   };
   
   function logSelectedEmailId() {
-  Office.context.mailbox.item.getSelectedDataAsync(Office.CoercionType.ItemId, function(result) {
-    if (result.status === Office.AsyncResultStatus.Succeeded) {
-      console.log('Selected Email ID:', result.value);
-    document.getElementById('emailIdentifier').textContent = result.value;
-    } else {
-      console.log('Error:', result.error.message);
-    }
-  });
+    console.log(Office.context.mailbox.item)
+
+//   Office.context.mailbox.item.getSelectedDataAsync(Office.CoercionType.ItemId, function(result) {
+//     if (result.status === Office.AsyncResultStatus.Succeeded) {
+//       console.log('Selected Email ID:', result.value);
+//     document.getElementById('emailIdentifier').textContent = result.value;
+//     } else {
+//       console.log('Error:', result.error.message);
+//     }
+//   });
 }
 
 
