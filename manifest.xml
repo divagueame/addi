@@ -59,9 +59,9 @@
                     <Description resid="funcReadSuperTipDescription" />
                   </Supertip>
                   <Icon>
-                    <bt:Image size="16" resid="blue-icon-16" />
-                    <bt:Image size="32" resid="blue-icon-32" />
-                    <bt:Image size="80" resid="blue-icon-80" />
+                    <bt:Image size="16" resid="Icon.16x16"/>
+                    <bt:Image size="32" resid="Icon.32x32"/>
+                    <bt:Image size="80" resid="Icon.80x80"/>
                   </Icon>
                   <Action xsi:type="ExecuteFunction">
                     <FunctionName>getSubject</FunctionName>
@@ -75,9 +75,9 @@
                     <Description resid="menuReadSuperTipDescription" />
                   </Supertip>
                   <Icon>
-                    <bt:Image size="16" resid="red-icon-16" />
-                    <bt:Image size="32" resid="red-icon-32" />
-                    <bt:Image size="80" resid="red-icon-80" />
+                    <bt:Image size="16" resid="Icon.16x16"/>
+                    <bt:Image size="32" resid="Icon.32x32"/>
+                    <bt:Image size="80" resid="Icon.80x80"/>
                   </Icon>
                   <Items>
                     <Item id="msgReadMenuItem1">
@@ -87,9 +87,9 @@
                         <Description resid="menuItem1ReadTip" />
                       </Supertip>
                       <Icon>
-                        <bt:Image size="16" resid="red-icon-16" />
-                        <bt:Image size="32" resid="red-icon-32" />
-                        <bt:Image size="80" resid="red-icon-80" />
+                    <bt:Image size="16" resid="Icon.16x16"/>
+                    <bt:Image size="32" resid="Icon.32x32"/>
+                    <bt:Image size="80" resid="Icon.80x80"/>
                       </Icon>
                       <Action xsi:type="ExecuteFunction">
                         <FunctionName>getItemClass</FunctionName>
@@ -102,9 +102,9 @@
                         <Description resid="menuItem2ReadTip" />
                       </Supertip>
                       <Icon>
-                        <bt:Image size="16" resid="red-icon-16" />
-                        <bt:Image size="32" resid="red-icon-32" />
-                        <bt:Image size="80" resid="red-icon-80" />
+                     <bt:Image size="16" resid="Icon.16x16"/>
+                    <bt:Image size="32" resid="Icon.32x32"/>
+                    <bt:Image size="80" resid="Icon.80x80"/>
                       </Icon>
                       <Action xsi:type="ExecuteFunction">
                         <FunctionName>getDateTimeCreated</FunctionName>
@@ -117,9 +117,9 @@
                         <Description resid="menuItem3ReadTip" />
                       </Supertip>
                       <Icon>
-                        <bt:Image size="16" resid="red-icon-16" />
-                        <bt:Image size="32" resid="red-icon-32" />
-                        <bt:Image size="80" resid="red-icon-80" />
+                    <bt:Image size="16" resid="Icon.16x16"/>
+                    <bt:Image size="32" resid="Icon.32x32"/>
+                    <bt:Image size="80" resid="Icon.80x80"/>
                       </Icon>
                       <Action xsi:type="ExecuteFunction">
                         <FunctionName>getItemID</FunctionName>
@@ -135,9 +135,9 @@
                     <Description resid="paneReadSuperTipDescription" />
                   </Supertip>
                   <Icon>
-                    <bt:Image size="16" resid="green-icon-16" />
-                    <bt:Image size="32" resid="green-icon-32" />
-                    <bt:Image size="80" resid="green-icon-80" />
+                    <bt:Image size="16" resid="Icon.16x16"/>
+                    <bt:Image size="32" resid="Icon.32x32"/>
+                    <bt:Image size="80" resid="Icon.80x80"/>
                   </Icon>
                   <Action xsi:type="ShowTaskpane">
                     <SourceLocation resid="readTaskPaneUrl" />
