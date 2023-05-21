@@ -74,7 +74,7 @@
           <!-- Message Compose -->
           <ExtensionPoint xsi:type="MessageComposeCommandSurface">
             <OfficeTab id="TabDefault">
-              <Group id="msg<!--  -->ComposeCmdGroup">
+              <Group id="msgComposeCmdGroup">
                 <Label resid="CommandsGroup.Label"/>
                 <Control xsi:type="Button" id="msgComposeInsertGist">
                   <Label resid="TaskpaneButton.Label"/>
