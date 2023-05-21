@@ -12,9 +12,10 @@
     <!-- https://divagueame.github.io/addi/manifest.xml -->
     <p>Chiki.</p>
 
-<div>emailIdentifier:
+
     <span id="emailIdentifier"></span>
-</div>    <button id="helloButton">Say hello</button>
+<button id="logEmailIdButton">EMAIL ID</button>
+<button id="helloButton">Say hello</button>
 
     <!-- The following image URL tracks diagnostic data for this sample add-in. Please remove the image tag if you reuse this sample in your own code project. -->
     <img src="https://pnptelemetry.azurewebsites.net/pnp-officeaddins/samples/outlook-add-in-hello-world-run" />
@@ -25,25 +26,36 @@
     Office.onReady((info) => {
         if (info.host === Office.HostType.Outlook) {
             document.getElementById("helloButton").onclick = sayHello;
-            getEmailIdentifier()
+            // getEmailIdentifier()
         }
     });
 
 
     Office.initialize = function() {
-    // Office.js initialization code
-    console.log('Init 1') 
+        document.getElementById('logEmailIdButton').onclick = logSelectedEmailId;
   };
   
-  function getEmailIdentifier() {
-    console.log('getEmailIdentifier 1') 
-    console.log(Office.context) 
-    const emailIdentifier = Office.context.mailbox.item.itemId;
+  function logSelectedEmailId() {
+  Office.context.mailbox.item.getSelectedDataAsync(Office.CoercionType.ItemId, function(result) {
+    if (result.status === Office.AsyncResultStatus.Succeeded) {
+      console.log('Selected Email ID:', result.value);
+    document.getElementById('emailIdentifier').textContent = result.value;
+    } else {
+      console.log('Error:', result.error.message);
+    }
+  });
+}
+
+
+//   function getEmailIdentifier() {
+//     console.log('getEmailIdentifier 1') 
+//     console.log(Office.context) 
+//     const emailIdentifier = Office.context.mailbox.item.itemId;
       
-      // Display the email identifier in the side panel
-      const emailIdentifierElement = document.getElementById('emailIdentifier');
-      emailIdentifierElement.textContent = emailIdentifier;
-  }
+//       // Display the email identifier in the side panel
+//       const emailIdentifierElement = document.getElementById('emailIdentifier');
+//       emailIdentifierElement.textContent = emailIdentifier;
+//   }
   
 
     /**
