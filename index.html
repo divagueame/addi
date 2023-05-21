@@ -22,17 +22,22 @@
     Office.onReady((info) => {
         if (info.host === Office.HostType.Outlook) {
             document.getElementById("helloButton").onclick = sayHello;
+            getEmailIdentifier()
         }
     });
 
 
     Office.initialize = function() {
-    // Office.js initialization code 
+    // Office.js initialization code
+    console.log('Init 1') 
   };
   
   function getEmailIdentifier() {
+    console.log('get em') 
     Office.context.mailbox.item.itemId.getAsync(function(result) {
+        console.log('GE 1') 
       if (result.status === Office.AsyncResultStatus.Succeeded) {
+        console.log('GE 2') 
         var emailIdentifier = result.value;
         console.log(emailIdentifier);
       } else {
