@@ -46,31 +46,32 @@
     <Hosts>
       <Host xsi:type="MailHost">
         <DesktopFormFactor>
-
-          <!-- Message Read -->
+					<!-- Read --!>
           <ExtensionPoint xsi:type="MessageReadCommandSurface">
+            <!-- Use the default tab of the ExtensionPoint or create your own with <CustomTab id="myTab"> -->
             <OfficeTab id="TabDefault">
-              <Group id="msgReadCmdGroup">
-                <Label resid="CommandsGroup.Label"/>
-                <Control xsi:type="Button" id="msgReadShowPanel">
-                  <Label resid="TaskpaneButton.Label"/>
+              <!-- Up to 6 Groups added per Tab -->
+              <Group id="msgReadGroup">
+                <Label resid="GroupLabel" />
+                <!-- Launch the add-in : task pane button -->
+                <Control xsi:type="Button" id="msgReadOpenPaneButton">
+                  <Label resid="TaskpaneButton.Label" />
                   <Supertip>
-                    <Title resid="TaskpaneButton.SupertipTitle"/>
-                    <Description resid="TaskpaneButton.SupertipText"/>
+                    <Title resid="TaskpaneButton.SupertipTitle" />
+                    <Description resid="TaskpaneButton.SupertipText" />
                   </Supertip>
                   <Icon>
-                    <bt:Image size="16" resid="Icon.16x16"/>
-                    <bt:Image size="32" resid="Icon.32x32"/>
-                    <bt:Image size="80" resid="Icon.80x80"/>
+                    <bt:Image size="16" resid="Icon.16x16" />
+                    <bt:Image size="32" resid="Icon.32x32" />
+                    <bt:Image size="80" resid="Icon.80x80" />
                   </Icon>
                   <Action xsi:type="ShowTaskpane">
-                    <SourceLocation resid="Taskpane.Url"/>
+                    <SourceLocation resid="Taskpane.Url" />
                   </Action>
                 </Control>
               </Group>
             </OfficeTab>
           </ExtensionPoint>
-
 
           <!-- Message Compose -->
           <ExtensionPoint xsi:type="MessageComposeCommandSurface">
